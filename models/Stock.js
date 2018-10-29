@@ -26,11 +26,11 @@ const StockSchema = new Schema({
         type: Number,
         required: true,
     },
-    highMarket: {
+    highMarketDay: {
         type: Number,
         required: true,
     },
-    lowMarket: {
+    lowMarketDay: {
         type: Number,
         required: true,
     },
@@ -68,6 +68,7 @@ const StockSchema = new Schema({
     },
     timesSearched: { /*number of times stock was searched for*/
         type: Number,
+        
     },
     bought6M: { /*number of shares bought in last 6 months*/
         type: Number,    
