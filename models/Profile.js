@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const ProfileSchema = new Schema({
+  user: {
+    type: Schema.types.ObjectId,
+    ref: "users",
+  },
   firstName: {
     type: String,
     required: true,
@@ -11,12 +15,11 @@ const ProfileSchema = new Schema({
     type: String,
     required: true,
   }, 
-  age: {
-    type: Number,
-  }, 
+  age: Number, 
   email: {
     type: String,
     required: true,
+    unique: true,
   }, 
   aboutMe: {
     type: String,
